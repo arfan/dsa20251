@@ -5,4 +5,12 @@ def factorial(n):
     else:
         return factorial(n-1) * n
 
-print("result is", factorial(5))
+
+def factorial_iter(n):
+    result = 1
+    for i in range(1, n+1):
+        result = result * i
+    
+    return result
+
+print("result is", factorial_iter(1000))
