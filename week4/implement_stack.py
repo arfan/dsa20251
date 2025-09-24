@@ -6,7 +6,7 @@ class StackSample:
 
     def push(self, el):
         if self.top == self.size - 1:
-            print("exception full stack")
+            print("exception stack overflow")
             return None
 
         self.top = self.top+1
@@ -25,35 +25,17 @@ class StackSample:
     def print(self):
         print("content=", self.data, " top=", self.top)
 
+    def isEmpty(self):
+        return self.top == -1
+    
+    def peek(self):
+        return self.data[self.top]
 
-stack = StackSample(5)
 
+stack = StackSample(10)
+
+stack.push(5)
+print("isEmpty=", stack.isEmpty())
+print("peek", stack.peek())
 stack.print()
-value = stack.pop()
 
-print(value)
-
-stack.push("T")
-stack.push("A")
-
-stack.print()
-result = stack.pop()
-print(result)
-
-# stack.push(1)
-# stack.print()
-
-# stack.push(2)
-# stack.print()
-
-# stack.push(3)
-# stack.print()
-
-# stack.push(4)
-# stack.print()
-
-# stack.push(5)
-# stack.print()
-
-# stack.push(6)
-# stack.print()
