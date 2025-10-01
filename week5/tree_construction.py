@@ -22,12 +22,6 @@ def initialize_node(value):
 
 
 def construct_tree():
-    """
-    Construct a tree based on the given pseudocode algorithm
-    
-    Returns:
-        Node: The root node of the constructed tree
-    """
     # Initialize root node
     root_node = initialize_node("Root")
     
@@ -53,14 +47,6 @@ def construct_tree():
 
 
 def print_tree(node, level=0, prefix=""):
-    """
-    Print the tree structure in a readable format
-    
-    Args:
-        node: The current node to print
-        level: The current depth level (for indentation)
-        prefix: Prefix for the current line
-    """
     if node is None:
         return
     
@@ -76,16 +62,6 @@ def print_tree(node, level=0, prefix=""):
 
 
 # def traverse_tree_preorder(node, result=None):
-#     """
-#     Traverse the tree in pre-order (root, then children)
-    
-#     Args:
-#         node: The current node
-#         result: List to store the traversal result
-        
-#     Returns:
-#         List: Values in pre-order traversal
-#     """
 #     if result is None:
 #         result = []
     
@@ -109,11 +85,11 @@ def main():
     print("Tree Structure:")
     print_tree(root)
     
-    print("\nPre-order Traversal:")
-    traversal_result = traverse_tree_preorder(root)
-    print(" -> ".join(traversal_result))
+    # print("\nPre-order Traversal:")
+    # traversal_result = traverse_tree_preorder(root)
+    # print(" -> ".join(traversal_result))
     
-    print("\nTree Construction Complete!")
+    # print("\nTree Construction Complete!")
 
 
 if __name__ == "__main__":
