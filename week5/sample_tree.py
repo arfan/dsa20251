@@ -17,9 +17,9 @@ def print_tree(node, level=0, prefix=""):
         else:
             print_tree(child, level + 1, "├── ")
 
-a = Node(2)
-b = Node(3)
-c = Node(4)
+a = Node("root")
+b = Node("child1")
+c = Node("child2")
 
 root = a
 a.children.append(b)
