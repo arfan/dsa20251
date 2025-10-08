@@ -13,39 +13,38 @@ class BinaryTree:
     
     def inorder_traversal(self, node):
         if node is not None:
-            self.inorder_traversal(node.left)    # Traverse left subtree
-            print(node.value, end=" ")           # Visit root
-            self.inorder_traversal(node.right)   # Traverse right subtree
+            self.inorder_traversal(node.left)   # Traverse left subtree
+            print(node.value, end=" ")  # Visit root
+            self.inorder_traversal(node.right) # Traverse right subtree
 
 def create_sample_tree():
     tree = BinaryTree()
     
-    # Create nodes
-    tree.root = TreeNode(1)
-    tree.root.left = TreeNode(2)
-    tree.root.right = TreeNode(3)
-    tree.root.left.left = TreeNode(4)
-    tree.root.left.right = TreeNode(5)
-    tree.root.right.left = TreeNode(6)
-    tree.root.right.right = TreeNode(7)
+    node_1 = TreeNode(1)
+    node_2 = TreeNode(2)
+    node_3 = TreeNode(3)
+    node_4 = TreeNode(4)
+    node_5 = TreeNode(5)
+    node_6 = TreeNode(6)
+    node_7 = TreeNode(7)
     
+    # Create nodes
+    tree.root = node_1
+    node_1.left = node_2
+    node_1.right = node_3
+
+    node_2.left = node_4
+    node_2.right = node_5
+    node_3.left = node_6
+    node_3.right = node_7
+
     return tree
-
-def visit_node(node):
-    if node is not None:
-        print(f"Visiting node with value: {node.value}")
-
-def recursive_visit_all_nodes(node):
-    if node is not None:
-        recursive_visit_all_nodes(node.left)   # Visit left subtree
-        visit_node(node)                        # Visit current node
-        recursive_visit_all_nodes(node.right)  # Visit right subtree
 
 def main():    
     tree = create_sample_tree()
     print("Inorder Traversal (Left -> Root -> Right):")
     tree.inorder_traversal(tree.root)
     print()  # New line after traversal
-    
+
 if __name__ == "__main__":
     main()
