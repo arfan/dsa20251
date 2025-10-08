@@ -32,7 +32,7 @@ def insert_node(root, value):
     while queue:
         # For each node in level
         node = queue.popleft() # dequeue
-        
+
         # Check if left child is NULL
         if node.left is None:
             node.left = Node(value)
