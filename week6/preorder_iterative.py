@@ -16,13 +16,16 @@ class BinaryTree:
             return
         
         # Create a stack and push the root node
-        stack = [root]
+        stack = []
+
+        # Push the root
+        stack.append(root)
         
         # Process nodes until stack is empty
         while stack:
             # Pop a node from stack and print it
             current = stack.pop()
-            print(current.value, end=" ")
+            print(current.value, end=" ") # Visit the current
             
             # Push right child first (so left is processed first)
             if current.right:
