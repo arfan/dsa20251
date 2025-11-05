@@ -37,7 +37,7 @@ def brute_force_password(target: str,
     return {"found": False, "attempts": attempts, "elapsed_seconds": elapsed}
 
 if __name__ == "__main__":
-    demo_target = "a1b2"               # must be exactly length 4 here
+    demo_target = "zzzz"               # must be exactly length 4 here
     demo_charset = "abcd0123"          # small charset for quick demo
     result = brute_force_password(demo_target, charset=demo_charset, length=4, show_progress=True)
 

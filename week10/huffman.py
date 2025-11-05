@@ -54,6 +54,11 @@ def huffman_encoding(char_freqs):
         print_codes(node.right, code + "1")
 
     print_codes(root)
+    
+    # Print the tree structure
+    print("\nHuffman Tree Structure:")
+    print_tree(root)
+    
     return codes
 
 
