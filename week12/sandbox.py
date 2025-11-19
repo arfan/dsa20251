@@ -8,3 +8,4 @@ right = arr[mid:]
 
 print("left", left)
 print("right", right)
+
