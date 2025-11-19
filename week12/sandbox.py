@@ -1,3 +1,4 @@
+#splitting an array
 
 arr = [4, 2, 3, 1]
 n = len(arr)
